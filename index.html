@@ -16,5 +16,7 @@
 {% endblock pubdate %}
 
 {% block content %}
-
+{% for obj in homicides %}
+{{ obj.HOMICIDE_VICTIM_FIRST_NAME }} {{ obj.HOMICIDE_VICTIM_LAST_NAME }}<br>
+{% endfor %}
 {% endblock content %}
