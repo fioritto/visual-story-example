@@ -8,7 +8,7 @@
 {% script 'app' %}
 {% endblock scripts %}
 
-{% block headline %}My headline will go here{% endblock headline %}
+{% block headline %}Chicago Homicides{% endblock headline %}
 
 {% block byline %}Michael Fioritto{% endblock byline %}
 
@@ -16,11 +16,25 @@
 {% endblock pubdate %}
 
 {% block content %}
+<h3>Two south Chicago neighborhoods stand apart</h3>
+<p>
+  While homicides moved upwards starting in 2021, the homicide rate remains below levels experienced in the 1990s. The homicide rate in Kenwood and Hyde Park remain lower than surrounding communities.
+</p>
+<div class="graphics-container">
+  <div class="graphic">
+    <iframe title="Chicago Homicides, 1991- 2024" aria-label="Column Chart" id="datawrapper-chart-XDaI4" src="https://datawrapper.dwcdn.net/XDaI4/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="411" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script>
+  </div>
+  <div class="graphic">
+    <!-- second graphic’s embed code goes here -->
+    <iframe title="Homicides in Kenwood/HydePark 1991 - 2024" aria-label="Column Chart" id="datawrapper-chart-MkZXz" src="https://datawrapper.dwcdn.net/MkZXz/1/" scrolling="no" frameborder="0" style="width: 0; min-width: 100% !important; border: none;" height="411" data-external="1"></iframe><script type="text/javascript">!function(){"use strict";window.addEventListener("message",(function(a){if(void 0!==a.data["datawrapper-height"]){var e=document.querySelectorAll("iframe");for(var t in a.data["datawrapper-height"])for(var r=0;r<e.length;r++)if(e[r].contentWindow===a.source){var i=a.data["datawrapper-height"][t]+"px";e[r].style.height=i}}}))}();
+    </script>
+  </div>
+</div>
+
 <h3>Lives lost in Kenwood and Hyde Park</h3>
 <p>
-  The {{ homicides|length }} homicides in Kenwood and Hyde Park since 1996
-  were primarily black and Latino males, but the list includes husbands, wives,
-  fathers, and mothers.
+  There have been {{ homicides|length }} homicides in Kenwood and Hyde Park since 1991. Victims were predominately black and male. Victims aged 20-30 represented more than 50% of all cases, while 17% of victims were under the age of 20.
 </p>
 <div class="row" data-masonry='{"percentPosition": true }'>
   {% for obj in homicides %}
