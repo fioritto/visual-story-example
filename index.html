@@ -47,6 +47,7 @@
           <h5 class="card-title">{{ obj.HOMICIDE_VICTIM_FIRST_NAME }} {{ obj.HOMICIDE_VICTIM_LAST_NAME }}</h5>
         </strong>
         <p class="card-text">{{ obj.HOMICIDE_VICTIM_LAST_NAME }}, a {{ obj.AGE }}-year-old {{ obj.RACE }} {{ obj.SEX }}, died in {{ obj.DATE }}.</p>
+        <p class="card-text"><a href="https://www.google.com/maps/search/?api=1&query={{ obj.LATITUDE}},{{ obj.LONGITUDE}}">Location</a></p>
       </div>
   </div>
   </div>
